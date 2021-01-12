@@ -3,7 +3,7 @@ package LabWork1;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class ArrayManager {
+public class ArrayUtils {
 
     /* 3. Створіть метод, який дозволяє вставляти в будь яку позицію
     масиву будь яке число. Метод повинен повертати новий масив. */
