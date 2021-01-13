@@ -13,6 +13,7 @@ public class ArrayUtils {
             newArr[i] = arr[i - 1];
         }
         newArr[index] = insertionValue;
+
         return newArr;
     }
 
@@ -21,6 +22,11 @@ public class ArrayUtils {
     як результат роботи методу. */
     public int[] RemoveAllDefinedValues(int[] arr, int valueToRemove) {
         int countRemovedElements = (int) Arrays.stream(arr).filter(i -> i == valueToRemove).count();
+
+        if (countRemovedElements == 0) {
+            return arr;
+        }
+
         int[] newArr = new int[arr.length - countRemovedElements];
         int startIndex = 0;
         for (int element : arr) {
@@ -28,6 +34,7 @@ public class ArrayUtils {
                 newArr[startIndex++] = element;
             }
         }
+
         return newArr;
     }
 
@@ -39,6 +46,7 @@ public class ArrayUtils {
             int count = counter.getOrDefault(element, 0);
             counter.put(element, ++count);
         }
+
         return counter;
     }
 
@@ -53,6 +61,7 @@ public class ArrayUtils {
                 }
             }
         }
+
         return min;
     }
 }
