@@ -15,3 +15,8 @@ out/production/OOP_Tasks/Program.class
 out/production/Java_Tasks/LabWork1/StringManager.class
 Java_Tasks.iml
 .idea/uiDesigner.xml
+.idea/libraries/junit_junit_4_12.xml
+out/production/Java_Tasks/LabWork1/StringUtils.class
+out/production/Java_Tasks/LabWork1/ArrayUtils.class
+out/production/Java_Tasks/LabWork1Test/ArrayUtilsTest.class
+out/production/Java_Tasks/LabWork1Test/StringUtilsTest.class
