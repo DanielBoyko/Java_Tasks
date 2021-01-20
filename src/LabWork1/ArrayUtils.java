@@ -38,6 +38,10 @@ public class ArrayUtils {
         return newArr;
     }
 
+    public int[] RemoveAllDefinedValuesWithStream(int[] arr, int valueToRemove) {
+        return Arrays.stream(arr).filter(value -> value != valueToRemove).toArray();
+    }
+
     /* 8. Створіть метод, який підраховує кількість однакових чисел у будь якому масиві int[].
     Приклад [1,7,3,9,34,3,7] Результат :  1- 1раз, 7 - 2 рази,3-2 рази…. */
     public HashMap<Integer, Integer> CountOfRepetitions(int[] arr) {
@@ -53,6 +57,9 @@ public class ArrayUtils {
     /* 29. Створіть метод, який приймає будь-яку кількість масивів int[] та повертає
     найменше число яке є у складі цих масивів */
     public int ArraysMinimumValue(int[]... arrays) {
+        if (arrays.length == 0) {
+            throw new IllegalArgumentException("You passed an empty parameter");
+        }
         int min = arrays[0][0];
         for (int[] array : arrays) {
             for (int element : array) {

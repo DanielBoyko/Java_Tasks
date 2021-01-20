@@ -48,7 +48,7 @@ class ArrayUtilsTest {
     void arraysMinimumValue() {
         ArrayUtils arrayUtils = new ArrayUtils();
 
-        int[] arr1 = {1, 2, 3};
+        int[] arr1 = {1, 2, 3, 5};
         int[] arr2 = {-2, 3, 4};
         int actual = arrayUtils.ArraysMinimumValue(arr1, arr2);
         int expected = -2;

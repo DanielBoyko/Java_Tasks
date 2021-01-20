@@ -11,7 +11,7 @@ class StringUtilsTest {
         StringUtils stringUtils = new StringUtils();
 
         String actual = "ьневарт";
-        String expected = stringUtils.Reverse("травень");
+        String expected = stringUtils.ReverseMethod("травень");
 
         Assert.assertEquals(expected, actual);
     }
