@@ -7,7 +7,27 @@ import org.junit.jupiter.api.Test;
 class StringUtilsTest {
 
     @Test
-    void reverse() {
+    void ReverseCharAt() {
+        StringUtils stringUtils = new StringUtils();
+
+        String actual = "ьневарт";
+        String expected = stringUtils.ReverseCharAt("травень");
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    void ReverseCharArray() {
+        StringUtils stringUtils = new StringUtils();
+
+        String actual = "ьневарт";
+        String expected = stringUtils.ReverseCharArray("травень");
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    void ReverseMethod() {
         StringUtils stringUtils = new StringUtils();
 
         String actual = "ьневарт";
