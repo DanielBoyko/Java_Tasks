@@ -8,12 +8,12 @@ public class StringUtils {
             throw new NullPointerException("Str is not nothing  referenced");
         }
 
-        String resultStr = "";
+        StringBuilder resultStr = new StringBuilder();
         for (int i = str.length() - 1; i >= 0; i--) {
-            resultStr += str.charAt(i);
+            resultStr.append(str.charAt(i));
         }
 
-        return resultStr;
+        return resultStr.toString();
     }
 
     public String ReverseCharArray(String str) {
@@ -21,13 +21,13 @@ public class StringUtils {
             throw new NullPointerException("Str is not nothing  referenced");
         }
 
-        String resultStr = "";
+        StringBuilder resultStr = new StringBuilder();
         char[] strArr = str.toCharArray();
         for (int i = strArr.length - 1; i >= 0; i--) {
-            resultStr += strArr[i];
+            resultStr.append(strArr[i]);
         }
 
-        return resultStr;
+        return resultStr.toString();
     }
 
     public String ReverseMethod(String str) {
