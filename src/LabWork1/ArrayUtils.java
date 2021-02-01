@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class ArrayUtils {
-
     /* 3. Створіть метод, який дозволяє вставляти в будь яку позицію
     масиву будь яке число. Метод повинен повертати новий масив. */
     public int[] Insert(int[] arr, int index, int insertionValue) {
@@ -55,7 +54,7 @@ public class ArrayUtils {
         return newArr;
     }
 
-    public int[] RemoveAllDefinedValuesWithStream(int[] arr, int valueToRemove) {
+    public int[] RemoveAllDefinedValuesUsingStream(int[] arr, int valueToRemove) {
         return Arrays.stream(arr).filter(value -> value != valueToRemove).toArray();
     }
 

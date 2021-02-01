@@ -11,7 +11,7 @@ class StringUtilsTest {
         StringUtils stringUtils = new StringUtils();
 
         String actual = "ьневарт";
-        String expected = stringUtils.ReverseCharAt("травень");
+        String expected = stringUtils.ReverseUsingCharAt("травень");
 
         Assert.assertEquals(expected, actual);
     }
@@ -21,7 +21,7 @@ class StringUtilsTest {
         StringUtils stringUtils = new StringUtils();
 
         String actual = "ьневарт";
-        String expected = stringUtils.ReverseCharArray("травень");
+        String expected = stringUtils.ReverseUsingCharArray("травень");
 
         Assert.assertEquals(expected, actual);
     }
@@ -31,7 +31,7 @@ class StringUtilsTest {
         StringUtils stringUtils = new StringUtils();
 
         String actual = "ьневарт";
-        String expected = stringUtils.ReverseMethod("травень");
+        String expected = stringUtils.ReverseUsingMethod("травень");
 
         Assert.assertEquals(expected, actual);
     }

@@ -34,7 +34,7 @@ class ArrayUtilsTest {
         ArrayUtils arrayUtils = new ArrayUtils();
 
         int[] arr = {1, 2, 3, 4, 3, 5};
-        int[] actual = arrayUtils.RemoveAllDefinedValuesWithStream(arr, 3);
+        int[] actual = arrayUtils.RemoveAllDefinedValuesUsingStream(arr, 3);
         int[] expected = {1, 2, 4, 5};
 
         Assert.assertArrayEquals(actual, expected);

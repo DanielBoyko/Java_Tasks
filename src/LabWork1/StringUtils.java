@@ -3,7 +3,7 @@ package LabWork1;
 public class StringUtils {
 
     /* 19. Створіть метод, який перевертає будь яке слово. Наприклад - на вході травень на виході ьневарт */
-    public String ReverseCharAt(String str) {
+    public String ReverseUsingCharAt(String str) {
         if (str == null) {
             throw new NullPointerException("Str is not nothing  referenced");
         }
@@ -16,7 +16,7 @@ public class StringUtils {
         return resultStr.toString();
     }
 
-    public String ReverseCharArray(String str) {
+    public String ReverseUsingCharArray(String str) {
         if (str == null) {
             throw new NullPointerException("Str is not nothing  referenced");
         }
@@ -30,7 +30,7 @@ public class StringUtils {
         return resultStr.toString();
     }
 
-    public String ReverseMethod(String str) {
+    public String ReverseUsingMethod(String str) {
         if (str == null) {
             throw new NullPointerException("Str is not nothing  referenced");
         }
