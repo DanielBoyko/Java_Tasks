@@ -2,7 +2,7 @@ package LabWork2.Products;
 
 import java.util.Date;
 
-public class Product {
+public abstract class Product {
     String title;
     String manufacturer;
     Date productionDate;
