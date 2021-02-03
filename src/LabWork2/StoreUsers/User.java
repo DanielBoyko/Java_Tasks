@@ -1,4 +1,4 @@
-package LabWork2.ShopUsers;
+package LabWork2.StoreUsers;
 
 public abstract class User {
     protected String login;
