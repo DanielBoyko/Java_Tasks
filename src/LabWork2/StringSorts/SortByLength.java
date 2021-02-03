@@ -6,8 +6,6 @@ public class SortByLength implements Comparator<String> {
 
     @Override
     public int compare(String first, String second) {
-        Integer firstLength = first.length();
-        Integer secondLength = second.length();
-        return firstLength.compareTo(secondLength);
+        return Integer.compare(first.length(),second.length());
     }
 }

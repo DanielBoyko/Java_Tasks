@@ -20,8 +20,6 @@ public class SortByCountVowelLetters implements Comparator<String> {
 
     @Override
     public int compare(String first, String second) {
-        Integer firstCountVowelLetters = getCountVowelLetters(first);
-        Integer secondCountVowelLetters = getCountVowelLetters(second);
-        return firstCountVowelLetters.compareTo(secondCountVowelLetters);
+        return Integer.compare(getCountVowelLetters(first),getCountVowelLetters(second));
     }
 }
