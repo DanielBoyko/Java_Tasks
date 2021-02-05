@@ -32,8 +32,8 @@ class SortByCountVowelLettersTest {
 
     static Stream<Arguments> dataProvider() {
         return Stream.of(
-                arguments(new String[]{"daeo", "ssa", "ddii"}, new String[]{"ssa", "ddii", "daeo"}),
-                arguments(new String[]{"", "saaa", "ddi"}, new String[]{"", "ddi", "saaa"}),
+                arguments(new String[]{"dAeo", "ssa", "ddii"}, new String[]{"ssa", "ddii", "dAeo"}),
+                arguments(new String[]{"saaa", "", "ddi"}, new String[]{"", "ddi", "saaa"}),
                 arguments(null, null)
         );
     }
