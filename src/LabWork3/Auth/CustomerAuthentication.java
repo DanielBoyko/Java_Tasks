@@ -6,8 +6,8 @@ import java.util.List;
 
 public class CustomerAuthentication implements Authenticatable<Customer> {
     @Override
-    public Customer Login(List<Customer> registeredUsers, String login, String password) {
-        return registeredUsers.stream()
+    public Customer Login(List<Customer> registeredСustomers, String login, String password) {
+        return registeredСustomers.stream()
                 .filter((customer) -> customer.getLogin() == login & customer.getPassword() == password)
                 .findFirst()
                 .orElse(null);

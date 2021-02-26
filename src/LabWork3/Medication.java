@@ -1,6 +1,9 @@
 package LabWork3;
 
+import java.util.UUID;
+
 public class Medication {
+    String id;
     String title;
     String manufacturer;
     boolean isNeedForConfirm;
@@ -23,6 +26,7 @@ public class Medication {
     }
 
     public Medication(String title, String manufacturer, boolean isNeedForConfirm, double price) {
+        this.id = UUID.randomUUID().toString();
         this.title = title;
         this.manufacturer = manufacturer;
         this.isNeedForConfirm = isNeedForConfirm;

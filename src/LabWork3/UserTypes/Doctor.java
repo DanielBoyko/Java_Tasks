@@ -1,9 +1,7 @@
 package LabWork3.UserTypes;
 
-import LabWork3.Medication;
 import LabWork3.Order;
 
-import java.util.HashMap;
 import java.util.List;
 
 public class Doctor extends User {
@@ -15,16 +13,17 @@ public class Doctor extends User {
         return orders;
     }
 
-    public Boolean acceptConfirmationOrder(List<Order> orders, int orderId) {
-        Order orderSearchResult = orders.stream()
-                .filter((order) -> order.getId() == orderId)
+    public Boolean acceptConfirmationOrder(List<Order> ordersAwaitingConfirmation, String orderId) {
+        Order orderSearchResult = ordersAwaitingConfirmation.stream()
+                .filter((order) -> order.getId().equals(orderId))
                 .findFirst()
                 .orElse(null);
 
         if (orderSearchResult != null) {
-            orders.remove(orderSearchResult);
+            ordersAwaitingConfirmation.remove(orderSearchResult);
             return true;
         }
+
         return false;
     }
 }

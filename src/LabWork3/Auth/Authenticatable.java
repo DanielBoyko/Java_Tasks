@@ -1,8 +1,6 @@
 package LabWork3.Auth;
 
-import LabWork3.UserTypes.Customer;
 import LabWork3.UserTypes.User;
-
 import java.util.List;
 
 public interface Authenticatable <T extends User> {
