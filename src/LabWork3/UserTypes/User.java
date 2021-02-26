@@ -9,7 +9,11 @@ public abstract class User {
         this.password = password;
     }
 
-    public boolean validLogicPass(String login, String password) {
-        return login == this.login & password == this.password;
+    public String getLogin() {
+        return login;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }
