@@ -15,6 +15,18 @@ public class CustomerAuthentication implements Authenticatable<Customer> {
 
     @Override
     public Customer Register(String login, String password, String confirmPassword) {
+        if(Validation.isEmptyOrWhiteSpace(login)){
+            throw new IllegalArgumentException("Invalid login");
+        }
+
+        if(Validation.isEmptyOrWhiteSpace(password)){
+            throw new IllegalArgumentException("Invalid password");
+        }
+
+        if(!password.equals(confirmPassword)){
+            throw new IllegalArgumentException("Passwords must match.");
+        }
+
         return new Customer(login, password);
     }
 }

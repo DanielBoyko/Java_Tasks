@@ -36,28 +36,28 @@ public class Customer extends User {
 
 
     public Order makeOrder(HashMap<Medication, Integer> medicationsInStock, HashMap<Medication, Integer> entity) {
-        if (isAllMedicationsInOrderHaveInStock(medicationsInStock, entity)) {
-            HashMap<Medication, Integer> medications = new HashMap<>();
-
-            for (Map.Entry<Medication, Integer> entry : entity.entrySet()) {
-                int valueOfMedicationsInStock = medicationsInStock.get(entry.getKey());
-                int valueOfEntity = entry.getValue();
-
-                if (valueOfMedicationsInStock > valueOfEntity) {
-                    medications.put(entry.getKey(), valueOfEntity);
-                    medicationsInStock.put(entry.getKey(), valueOfMedicationsInStock - valueOfEntity);
-                } else if (valueOfMedicationsInStock == valueOfEntity) {
-                    medications.put(entry.getKey(), valueOfEntity);
-                    medicationsInStock.remove(entry.getKey());
-                } else {
-                    medications.put(entry.getKey(), valueOfMedicationsInStock);
-                    medicationsInStock.remove(entry.getKey());
-                }
-            }
-
-            return new Order(login, medications);
+        if (!isAllMedicationsInOrderHaveInStock(medicationsInStock, entity)) {
+            throw  new IllegalArgumentException("You go to order a medication that is not in stock");
         }
-        throw  new IllegalArgumentException("You go to order a medication that is not in stock");
+
+        HashMap<Medication, Integer> medications = new HashMap<>();
+        for (Map.Entry<Medication, Integer> entry : entity.entrySet()) {
+            int valueOfMedicationsInStock = medicationsInStock.get(entry.getKey());
+            int valueOfEntity = entry.getValue();
+
+            if (valueOfMedicationsInStock > valueOfEntity) {
+                medications.put(entry.getKey(), valueOfEntity);
+                medicationsInStock.put(entry.getKey(), valueOfMedicationsInStock - valueOfEntity);
+            } else if (valueOfMedicationsInStock == valueOfEntity) {
+                medications.put(entry.getKey(), valueOfEntity);
+                medicationsInStock.remove(entry.getKey());
+            } else {
+                medications.put(entry.getKey(), valueOfMedicationsInStock);
+                medicationsInStock.remove(entry.getKey());
+            }
+        }
+
+        return new Order(login, medications);
     }
 
     private boolean isAllMedicationsInOrderHaveInStock(HashMap<Medication, Integer> medicationsInStock, HashMap<Medication, Integer> entity) {
